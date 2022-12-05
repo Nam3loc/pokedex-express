@@ -5,15 +5,29 @@ const myStyle = {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
 }
 
 const secondStyle = {
-    paddingTop: '165px',
-
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+
+    backgroundColor: '#B90E0A',
+    color: 'white',
+    fontFamily: 'comic sans ms',
+    // height: '600px',
+    width: '75%',
+    border: '2px solid black',
+    margin: '750px',
+    marginTop: '900px',
+    marginBottom: '1500px'
 }
 
 class Index extends React.Component {
@@ -31,7 +45,7 @@ class Index extends React.Component {
                             pokemon.map((pokemon, i) => {
                                 return (
                                 <li key={i}>
-                                    <a style={{color: 'red'}} href={`/pokemon/i${i}`}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.substr(1).toLowerCase()}</a>
+                                    <a style={{color: 'white'}} href={`/pokemon/i${i}`}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.substr(1).toLowerCase()}</a>
                                     <br />
                                     {
                                     <img src={pokemon.img} alt={"Picture of " + pokemon.name} />
